@@ -3,31 +3,6 @@ Short abstract :
 We are building a project that monitors the humidity of soil in a plant, the amount sunlight the plant is absorbing, and the amount of UV striking the plant. The plant monitoring system will notify the user(wherever he/she is) when watering is required and if there is too much UV. These notifications will be sent to the user’s phone and the data will also be reported to the users phone. This system will be useful for people who are busy throughout the day and as well for novice gardeners. Analyzing the soil humidity  will decide how much watering is required. We are using the Sparkfun ESP 8266 dev to build the project. 
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 # Sensors that we are using: 
 -	Sparkfun Soil Moisture Sensor 
 
@@ -50,20 +25,13 @@ We are building a project that monitors the humidity of soil in a plant, the amo
 
   
  
- 
- 
- 
+
 # Setup: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Cloud Service Provider: 
+![Alt text](/relative/path/to/plant1.png?raw=true "Optional Title")
+
+
+
+# Cloud Service Provider: 
 -	We are using Blynk as our cloud service provider.  
 What is Blynk? 
 -	Blynk is a cloud service provider where the data collected from an Arduino/Raspberry Pi/ESP82266 is sent to. Afterwards, if user’s have the Blynk Android/IOS app installed, the data is sent to the user’s phone and presented any visual format the user desires.  
@@ -71,7 +39,7 @@ Blynk HTTP RESTful API
 -	Blynk offers an API that allows users to read the sensor data stored in Blynk’s cloud or overwrite the current sensor data. This is done through PUT and GET requests that update the pin’s state in apps and on the ESP8266.  
  
  
-Plant Project Under the Hood: 
+# Plant Project Under the Hood: 
 -	This explains in detail how our project works. 
 How is the data sent to the Cloud? - By using the ESP8266 dev board, the sensor data is sent to a Blynk’s server via WI-FI.  What type of data is being sent? 
 -	We are sending the current soil moisture, amount of light, and amount of UV that the plant is absorbing. 
