@@ -39,10 +39,11 @@ We are building a project that monitors the humidity of soil in a plant, the amo
 ## Blynk HTTP RESTful API 
 -	Blynk offers an API that allows users to read the sensor data stored in Blynk’s cloud or overwrite the current sensor data. This is done through PUT and GET requests that update the pin’s state in apps and on the ESP8266.  
  
- 
 # Plant Project Under the Hood: 
 -	This explains in detail how our project works. 
-## How is the data sent to the Cloud? - By using the ESP8266 dev board, the sensor data is sent to a Blynk’s server via WI-FI.  What type of data is being sent? 
+## How is the data sent to the Cloud? 
+- By using the ESP8266 dev board, the sensor data is sent to a Blynk’s server via WI-FI.  
+## What type of data is being sent? 
 -	We are sending the current soil moisture, amount of light, and amount of UV that the plant is absorbing. 
 ## What analytics are being performed? 
  ### Soil Moisture Sensor: 
@@ -63,6 +64,6 @@ We are building a project that monitors the humidity of soil in a plant, the amo
 ## Why are we using a weather API? 
 -	We are using a weather API to see if it’s sunny or cloudy. Depending on the current conditions, the user will receive a push notification regarding the plant’s needs. 
 ## What type of push notifications are being sent? 
-1)	If the soil moisture falls below a certain value, the user will receive a push notification stating to water their plant. 
-2)	Every morning the user will receive a push notification to water their plant more or to water it less, depending on the current weather conditions. 
-3)	If the UV index is greater than or equal to 8, the user will receive a push notification stating that the plant is receiving too much UV. 
+- If the soil moisture falls below a certain value, the user will receive a push notification stating to water their plant. 
+- Every morning the user will receive a push notification to water their plant more or to water it less, depending on the current weather conditions. 
+- If the UV index is greater than or equal to 8, the user will receive a push notification stating that the plant is receiving too much UV. 
