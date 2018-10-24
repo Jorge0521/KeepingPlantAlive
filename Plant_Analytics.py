@@ -137,8 +137,8 @@ while(True):
     average_light = light_counter / count
     #average_uv = uv_counter / count
     average_soil = soil_counter / count
-    request8 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/update/V5?value=%s'%average_soil)
-    request9 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/update/V6?value=%s'%average_light)
+    request8 = Request('apiKey'%average_soil)
+    request9 = Request('apiKey'%average_light)
     response_body = urlopen(request9).read()
     response_body = urlopen(request8).read()
     time.sleep(1)
