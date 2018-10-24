@@ -6,9 +6,9 @@ from datetime import datetime
 from pytz import timezone
 import time
 
-light = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/get/V1')
-uv = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/get/V2')
-soil = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/get/V4')
+light = Request('blynkApikey')
+uv = Request('blynkApikey')
+soil = Request('blynkApikey')
 
 
 headers = {
@@ -18,7 +18,7 @@ headers = {
 
 #-----------------------------------------------------------------
 
-api_address = "http://api.openweathermap.org/data/2.5/weather?appid=6148c4a0692f42c8a29e3625938822fc&q="
+api_address = "openWeatherApiKey"
 city = raw_input("City Name :")
 
 url = api_address + city
@@ -59,27 +59,27 @@ uv_message = """
   }
   """
   
-request3 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/notify',
+request3 = Request('blynkApikey',
 data=report, headers=headers)
 
-request = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/notify', data=morning_message, headers=headers)
+request = Request('blynkApikey', data=morning_message, headers=headers)
 
-request2 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/notify', data=cloud_message, headers=headers)
+request2 = Request('blynkApikey', data=cloud_message, headers=headers)
 
-request4 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/notify', data=water, headers=headers)
+request4 = Request('blynkApikey', data=water, headers=headers)
 
-request5 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/notify', data=uv_message, headers=headers)
+request5 = Request('blynkApikey', data=uv_message, headers=headers)
 #---------------------------------------------------------------
-request6 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/update/V2?value=8')
+request6 = Request('blynkApikey')
 
 '''
-request8 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/update/V5?value=%s'%average_soil)
+request8 = Request('blynkApikey')
 
-request9 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/update/V6?value=%s'%average_light)
+request9 = Request('blynkApikey')
 '''
 
 #--------------------------------------------------------------
-request7 = Request('http://blynk-cloud.com/70b99a6da3334fd5814021939f1187fb/get/V7')
+request7 = Request('blynkApikey')
 
 #---------------------------------------------------------------
 print(str(cloud_percent) + "% cloudy")
